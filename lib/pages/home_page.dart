@@ -13,6 +13,13 @@ class _HomePageState extends State<HomePage> {
   // Firestore
   final firestoreService = FirestoreService();
 
+  String capitalizeFirstLetter(String text) {
+  if (text.isEmpty) {
+    return text;
+  }
+  return text[0].toUpperCase() + text.substring(1);
+}
+
   // Controller for the user's input
   final TextEditingController textcontroller = TextEditingController();
 
@@ -115,7 +122,10 @@ class _HomePageState extends State<HomePage> {
       shadowColor: Colors.black.withOpacity(0.8),
 
       child: ListTile(
-        title: Text(title),
+        title: Text(
+          capitalizeFirstLetter(title),
+         style: const TextStyle(fontWeight: FontWeight.bold),
+         ), // this line makes the text bold),
         trailing: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
