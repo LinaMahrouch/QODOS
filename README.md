@@ -1,3 +1,3 @@
-# tech_habits
+# QODOS
 
-A new Flutter project.
+A developer friendly TODO flutter app
