@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "909944335966",
+    "project_id": "qodo-2223c",
+    "storage_bucket": "qodo-2223c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:909944335966:android:f54aa1115f57c8c6350ecf",
+        "android_client_info": {
+          "package_name": "com.example.tech_habits"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTGLoA5sdiHHtQSZvTVNqWenawp05BtIc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
