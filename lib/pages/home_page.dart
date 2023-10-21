@@ -33,16 +33,23 @@ class _HomePageState extends State<HomePage> {
           child : TextField(
           controller: textcontroller,
           decoration: InputDecoration(  // Styling for TextField
-            hintText: 'Enter your note',
+            hintText: 'Enter your Qodo!',
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(15),
             ),
+            focusedBorder: OutlineInputBorder(  // This is the border when the TextField is focused
+      borderRadius: BorderRadius.circular(15),
+      borderSide: const BorderSide(color: Colors.black, width: 2.0),
+    ),
           ),
         ),
         ),
         actions: [
           // Save button
           ElevatedButton(
+            style: ElevatedButton.styleFrom(
+            foregroundColor: Colors.white, backgroundColor: Colors.black, // Text color
+          ),
             onPressed: () {
               if (docId == null) {
                 firestoreService.addQodo(textcontroller.text);
@@ -52,7 +59,7 @@ class _HomePageState extends State<HomePage> {
               textcontroller.clear();
               Navigator.pop(context);
             },
-            child: const Text('Add'),
+            child: Text(docId == null ? 'Add Qodo' : 'Edit Qodo'),  // Change text based on action
           )
         ],
       ),
