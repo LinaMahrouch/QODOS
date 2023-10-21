@@ -28,6 +28,10 @@ class _HomePageState extends State<HomePage> {
     if (qodoText != null) {
     textcontroller.text = qodoText; // Set the textcontroller's text to the passed noteText.
   }
+   else {
+    textcontroller.clear(); // Clear the textcontroller if no qodoText is passed.
+  }
+
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
@@ -70,7 +74,7 @@ class _HomePageState extends State<HomePage> {
           )
         ],
       ),
-    );
+    ).then((_) => textcontroller.clear()); // Clear the textcontroller when the dialog is closed.;
   }
 
   @override
